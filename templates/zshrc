@@ -59,7 +59,7 @@ FINISH="%{$terminfo[sgr0]%}"
 
 #command prompt
 #RPROMPT=$(echo "%D %T$FINISH")
-PROMPT=$(echo "%n@%m:{$GREEN%~$FINISH}[$?]$ ")
+PROMPT=$(echo "%n@%m:{$GREEN%~$FINISH}[$?]$YELLOW<zsh>$FINISH$ ")
  
 #PROMPT=$(echo "$BLUE%M$GREEN%/
 #$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW>>>$FINISH ")
