@@ -59,14 +59,14 @@ FINISH="%{$terminfo[sgr0]%}"
 
 #command prompt
 #RPROMPT=$(echo "%D %T$FINISH")
-PROMPT=$(echo "%n@%m:{$GREEN%~$BLACK}[$?]$YELLOW<zsh>$BLACK$ ")
+PROMPT=$(echo "%n@%m:{$GREEN%~$BLACK}$ ")
  
 #PROMPT=$(echo "$BLUE%M$GREEN%/
 #$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW>>>$FINISH ")
 #title,taskbar style{{{
 case $TERM in (*xterm*|*rxvt*|(dt|k|E)term)
 precmd () { print -Pn "\e]0;%n@%M%~\a" }
-preexec () { print -Pn "\e]0;%n@%M%R~ $1\a" }
+preexec () { print -Pn "\e]0;%n@%M%R%~ $1\a" }
 ;;
 esac
 #}}}
